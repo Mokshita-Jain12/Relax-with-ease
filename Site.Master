@@ -1,0 +1,277 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="WebApplication1.SiteMaster" %>
+
+<%@ Import Namespace="WebApplication1" %>
+<%@ Import Namespace="Microsoft.AspNet.Identity" %>
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <script type="text/javascript">
+        function fuctionseach()
+        {
+            var bca = document.getElementById("p1").value
+            if(bca=="whatsapp")
+            {
+                window.open("https://web.whatsapp.com/");
+            }
+            else if(bca=="instagram")
+            {
+                window.open("https://www.instagram.com/");
+            }
+            else if(bca=="facebook")
+            {
+                window.open("https://fb.com");
+            }
+            else if(bca=="twitter")
+            {
+                window.open("https://twitter.com/?lang=en");
+            }
+            else if(bca=="youtube")
+                {
+                window.open("https://www.youtube.com/");
+            }
+            else if (bca=="linkedin")
+            {
+                window.open("https://in.linkedin.com/");
+            }
+            else if (bca=="telegram") {
+                window.open("https://telegram.org/");
+            }
+            else if (bca=="snapchat") {
+                window.open("https://play.google.com/store/apps/details?id=com.snapchat.android&hl=en_IN&gl=US");
+            }
+            else if (bca=="printerest") {
+                window.open("https://in.pinterest.com/");
+            }
+            else if (bca=="tinder") {
+                window.open("https://tinder.com/");
+            }
+            else if (bca=="flickr") {
+                window.open("https://www.flickr.com/");
+            }
+            else if (bca=="okcupid") {
+                window.open("https://www.okcupid.com/");
+            }
+            else if (bca=="tumblr") {
+                window.open("https://www.tumblr.com/");
+            }
+            else if (bca=="hinge") {
+                window.open("https://play.google.com/store/apps/details?id=co.hinge.app&hl=en_IN&gl=US");
+            }
+            else if (bca=="truly madly") {
+                window.open("https://trulymadly.com/");
+            }
+            else if (bca=="reddit") {
+                window.open("https://www.reddit.com/");
+            }
+            else if (bca=="discord") {
+                window.open("https://discord.com/");
+            }
+            else if (bca=="happn") {
+                window.open("https://www.happn.com/en/");
+            }
+            else if (bca=="bumble") {
+                window.open("https://bumble.com/en-in/");
+            }
+            else if (bca=="signal") {
+                window.open("https://signal.org/en/");
+            }
+            else if (bca=="zoom") {
+                window.open("https://zoom.us/");
+            }
+            else if (bca=="meet") {
+                window.open("https://meet.google.com/");
+            }
+            else if (bca=="google meet") {
+                window.open("https://meet.google.com/");
+            }
+            else if (bca=="skype") {
+                window.open("https://www.skype.com/en/");
+            }
+            else if (bca=="cisco") {
+                window.open("https://www.webex.com/");
+            }
+            else if (bca=="gotomeeting") {
+                window.open("https://www.gotomeeting.com/en-in");
+            }
+            else if (bca=="gmail") {
+                window.open("https://mail.google.com/");
+            }
+            else if (bca=="amazon prime") {
+                window.open("https://www.primevideo.com/");
+            }
+            else if (bca=="prime") {
+                window.open("https://www.primevideo.com/");
+            }
+            else if (bca=="netflix") {
+                window.open("https://www.netflix.com/in/");
+            }
+            else if (bca=="alt balaji") {
+                window.open("https://www.altbalaji.com/");
+            }
+            else if (bca=="jio cinema") {
+                window.open("https://www.jiocinema.com/");
+            }
+            else if (bca=="erosnow") {
+                window.open("https://erosnow.com/");
+            }
+            else if (bca=="tubi") {
+                window.open("https://tubitv.com/");
+            }
+            else if (bca=="spuul") {
+                window.open("https://spuul.com/");
+            }
+            else if (bca=="watcho") {
+                window.open("https://www.watcho.com/");
+            }
+            else if (bca=="voot") {
+                window.open("https://www.voot.com/");
+            }
+            else if (bca=="sony movies") {
+                window.open("https://www.sonymovies.com/");
+            }
+            else if (bca=="hotstar") {
+                window.open("https://www.hotstar.com/in");
+            }
+            else if (bca=="zee5") {
+                window.open("https://www.zee5.com/");
+            }
+            else if (bca=="google") {
+                window.open("https://www.google.com/");
+            }
+            else if (bca=="McDonald") {
+                window.open("https://www.mcdonalds.com/us/en-us.html");
+            }
+            else if (bca=="Pizza Hut") {
+                window.open("https://www.pizzahut.co.in/");
+            }
+            else if (bca == "Subway") {
+                window.open("https://www.subway.com/en-IN");
+            }
+            else if (bca=="Burger King") {
+                window.open("https://www.bk.com/");
+            }
+            else if (bca=="Dominos") {
+                window.open("https://www.dominos.co.in/");
+            }
+            else if (bca=="Starbucks") {
+                window.open("https://www.starbucks.in/");
+            }
+
+        else
+        {
+        document.write("Page Not found");
+        }
+        }
+    </script>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="/Style/appContent.css" type="text/css" />
+
+</head>
+
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!--<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">MyTecBits.com</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="/Default.aspx">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown04″>Dropdown <span class="caret"></span></a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+                </li>
+                </ul>
+            </div>
+        </nav>-->
+
+        <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+                Relax with Ease
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="fro.aspx">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Default.aspx">Tabular world</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="meet.aspx">Virtual Meetings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="movie.aspx">Binge Watch</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="food.aspx">Food Delivery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feed.aspx">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            <form1:form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" id="p1" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="fuctionseach()">Search</button>
+            </form1:form>
+            </div>
+           </nav>
+            <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </footer>
+        </div>
+    </form>
+</body>
+
+</html> 
